@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="../js/app.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl as ctrl">
+  <p>Username : <input type="text" ng-model="name"></p>
+   <p>Quote : <input type="text" ng-model="quote"></p>
+
+  <button ng-click="ctrl.add();" name="button"  type="button">Add</button>
+  <button ng-click="ctrl.retrieve();" name="button" type="button">Retrieve Price</button>
+
+
+
+  <table>
+  <tr>
+  <th>Quote</th>
+  <th>Price</th>
+  </tr>
+  <tr ng-repeat="q in quotes"> 
+  	<td>{{q.quote}}</td>
+  	<td>{{q.price}}</td>
+   	</tr>
+  </table>
+
+
+
+</div>
+
+</body>
+</html>
